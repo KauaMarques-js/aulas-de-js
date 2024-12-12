@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de Indentificacão</h1>
+    <input type="text" id="Naci" placeholder="País de Origem">
+    <input type="button" onclick="descobrir()" value="Sou Brasileiro?" id="Descobrir">
+    <div id="res">Resposta</div>
+</body>
+<script>
+    let Pais = document.getElementById('Naci')
+    let Resposta = document.querySelector('#res')
+
+    function descobrir(){
+        let PaisNasci = (Pais.value);
+        if(PaisNasci == 'Brasil' || PaisNasci == 'brasil'){
+            Resposta.innerHTML = `Brasileiro! Nasceu em ${PaisNasci}!`
+        }else{
+            Resposta.innerHTML = `Estrangeiro! Nasceu no ${PaisNasci}!`
+        }
+    }
+</script>
+</html>

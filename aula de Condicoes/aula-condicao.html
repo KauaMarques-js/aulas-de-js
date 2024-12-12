@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sistemas de Mutas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel" /> Km/h
+    <input type="button" value="Verificar" onclick="calcular()" />
+    <div id="res">Resposta</div>
+    <style>
+        #res{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script>
+      function calcular() {
+        let txtvel = document.getElementById("txtvel");
+        let vel = Number(txtvel.value);
+        let Res = document.querySelector("#res");
+        if(vel >40){
+            Res.innerHTML = `Multado!`
+        }else{
+          Res.innerHTML = `Permitido!`
+        }
+        Res.innerHTML += `<br/>Sua velocidade atual é de ${vel}Km/h`
+      }
+    </script>
+  </body>
+</html>

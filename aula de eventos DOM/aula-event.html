@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somando Números</title>
+    <style>
+      body {
+        background: linear-gradient(
+          90deg,
+          rgb(1, 92, 92) 0%,
+          rgb(1, 219, 219) 50%,
+          rgb(6, 179, 179) 100%
+        );
+        font: 15pt Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      #container {
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+        flex-direction: column;
+        background-color: rgb(63, 63, 63);
+        display: flex;
+        justify-content: flex-start;
+        padding: 20px;
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+      }
+      #res {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Somando Valores</h1>
+    <div id="container">
+      <input type="number" name="txtn1" id="txtn1" /> +
+      <input type="number" name="txtn2" id="txtn2" />
+      <input type="button" value="somar" onclick="somar()"/>
+      <div id="res">Resultado</div>
+    </div>
+    <script>
+      function somar() {
+
+  //se nao tiver onlick="nome()" no button, crie uma função addEventListener('click, nome')
+  
+        let tn1 = document.getElementById("txtn1");
+        let tn2 = document.querySelector("#txtn2");
+        let res1 = document.querySelector("#res");
+        let n1 = Number(tn1.value);
+        let n2 = Number(tn2.value);
+        let s = n1 + n2;
+
+        res1.innerHTML = `A Soma entre ${n1} e ${n2} é igual a <strong> ${s} </strong> `;
+      }
+    </script>
+  </body>
+</html>

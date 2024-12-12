@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: linear-gradient(
+          90deg,
+          rgb(1, 92, 92) 0%,
+          rgb(1, 219, 219) 50%,
+          rgb(6, 179, 179) 100%
+        );
+        font-family: Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Iniciando DOM</h1>
+    <p>aqui vai paragrafos</p>
+    <p>aprendendo <strong>DOM</strong> em JS</p>
+    <div id="sla">clique aq</div>
+  </body>
+  <script>
+    //forma de chamar pelo nome, nao recomendado, porem explica as posições.
+    let p1 = document.getElementsByTagName("p")[0];
+
+    //duas formas de mudar o text bucando por id.
+    let d = document.getElementById("sla");
+    d.innerText = "estou arguardado...";
+    document.getElementById("sla").innerText = "vappooooo";
+
+    //exemplo de querySelector()
+      let a = document.querySelector('#title')
+      a.style.color = 'red'
+
+
+
+
+  </script>
+</html>
